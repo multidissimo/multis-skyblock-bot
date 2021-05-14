@@ -1,20 +1,9 @@
-const lib = require('lib')({token: process.env.STDLIB_SECRET_TOKEN});
+const config = JSON.parse(fs.readFileSync('config.json','utf-8'));
 
-var version = '[Alpha] ';
-
-module.exports = async (event, context) => {
-  
-  /**  if(event.content.match(/test/i)) {
-    await lib.discord.channels.messages.create({
-      channel_id: event.channel_id,
-      content: 'test',
-    })
-  }*/
-
-  if ((event.content.match(/farm|farmen|(schnell farmen)|(gute farm)/i)) 
-  && (event.content.match(/bau|contest/i))) {
-    await lib.discord.channels.messages.create({
-      channel_id: event.channel_id,
+client.on('message', () => {
+  if(message.content.includes(/farm|farmen|(schnell farmen)|(gute farm)/i)
+  && (message.content.includes(/bau|contest/i))) {
+    discord.message.create ({
       content: ``,
       embed: {
         title: version + 'Automatische Antwort',
@@ -32,5 +21,4 @@ module.exports = async (event, context) => {
       ]}
     });
   }
-  
-}
+})
