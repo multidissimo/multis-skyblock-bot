@@ -1,3 +1,4 @@
 const Discord = require('discord.js');
-const fs = require('fs');
-const config = JSON.parse(fs.readFileSync('config.json','utf-8'));
+const bot = new Discord.Client();
+
+bot.login('ODQxNjI4MjgyNjE3NDYyODE0.YJphaw.bCyM5B0C2ab4ebN-ELnLB2vAP00');
