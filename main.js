@@ -1,6 +1,6 @@
-const Discord = require("discord.js")
-const fs = require("fs")
-const config = JSON.parse(fs.readFileSync("config.json"  ,  utf8))
+const Discord = require("discord.js");
+const fs = require("fs");
+const config = JSON.parse(fs.readFileSync("config.json"  ,  utf8));
 const autoTrigger = require('./autoTrigger/autoTrigger');
 
 const client = new Discord.Client()
@@ -12,6 +12,18 @@ console.log("Loading...")
 client.on('ready'  , () => {
 	console.log("Bot logged in as" + client.user.tag + '!')
 	console.log("The Bot is on" + client.guilds.cache.size + "Servers!")
+})
+
+client.on('message', message => {
+	if (message.content.match(/farm|farmen|(schnell farmen)|(gute farm)/i)
+  && (message.content.match(/bau|contest/i))) {
+    message.channel.send(new Discord.MessageEmbed()
+    .setColor('#e74c3c')
+    .setTitle(config.version)
+    .addField("Test")
+    .setTimestamp()
+    .setFooter(config.footer))
+  }
 })
 
 /**
