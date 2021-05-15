@@ -1,13 +1,17 @@
-const Discord = require('discord.js');
-const config = require('./config.json');
-const client = new Discord.Client();
-
+const Discord = require("discord.js")
+const fs = require("fs")
+const config = JSON.parse(fs.readFileSync("config.json"  ,  utf8))
 const autoTrigger = require('./autoTrigger/autoTrigger');
+
+const client = new Discord.Client()
+
 
 client.on('message', autoTrigger);
 
-client.once('ready', () => {
-    console.log("Connected as " + client.user.tag)
+console.log("Loading...")
+client.on('ready'  , () => {
+	console.log("Bot logged in as" + client.user.tag + '!')
+	console.log("The Bot is on" + client.guilds.cache.size + "Servers!")
 })
 
 /**
