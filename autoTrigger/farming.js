@@ -6,7 +6,7 @@ module.exports = async function (message) {
     && (message.content.match(/bau|contest/i))) {
         var embed = new Discord.MessageEmbed()
           .setColor(config.color)
-          .setTitle(config.version)
+          .setTitle(config.version + 'Farming')
           .addField('Wie man schnell Farmen baut:', 'https://youtu.be/OsnwMCNnAM4')
           .addField('Alle Arten von Farmen // Gold in jedem Farming Contest bekommen', 'https://youtu.be/uSYRSxtM6Ok')
           .setTimestamp()
@@ -19,7 +19,7 @@ module.exports = async function (message) {
     && (message.content.match(/reforge/i))) {
         var embed = new Discord.MessageEmbed()
           .setColor(config.color)
-          .setTitle(config.version)
+          .setTitle(config.version + 'Farming')
           .setDescription('Für Farming Tools eignet sich das Reforge [Blessed](https://hypixel-skyblock.fandom.com/wiki/Blessed_Fruit) am besten.')
           .setTimestamp()
           .setFooter(config.footer)
@@ -31,7 +31,7 @@ module.exports = async function (message) {
     && (message.content.match(/speed/i))) {
         var embed = new Discord.MessageEmbed()
           .setColor(config.color)
-          .setTitle(config.version)
+          .setTitle(config.version + 'Farming')
           .addField('Einzelne Reihe','355 Speed')
           .addField('Kürbisse/Melonen etc. (2 Reihen)','266 Speed')
           .addField('Karotten/Kartoffeln etc. (4 Reihen)','116 Speed')

@@ -1,6 +1,6 @@
 {
     "token": "",
-    "version": "[Testbetrieb]",
-    "footer": "Automatische Antwort - alle Angaben ohne Gewehr.",
+    "version": "[Testbetrieb] ",
+    "footer": "Automatische Antwort - Fehler oder Verbesserungen bitte in #feedback melden",
     "color": "#e74c3c"
 }

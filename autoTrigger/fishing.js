@@ -7,7 +7,7 @@ module.exports = async function (message) {
     && (message.content.match(/reforge/i))) {
         var embed = new Discord.MessageEmbed()
           .setColor(config.color)
-          .setTitle(config.version)
+          .setTitle(config.version + 'Fishing')
           .addField('Fishing Reforge für Angeln:','[Salty](https://hypixel-skyblock.fandom.com/wiki/Terry)')
           .addField('Fishing Reforge für Rüstungen:','[Submerged](https://hypixel-skyblock.fandom.com/wiki/Deep_Sea_Orb)')
           .setTimestamp()
@@ -20,8 +20,9 @@ module.exports = async function (message) {
     && (message.content.match(/fishing/i))) {
         var embed = new Discord.MessageEmbed()
           .setColor(config.color)
-          .setTitle(config.version)
-          .setDescription('Die beste Fishing Rüstung ist die [Shark Scale Armor](https://hypixel-skyblock.fandom.com/wiki/Shark_Scale_Armor).')
+          .setTitle(config.version + 'Fishing')
+          .addField('Die beste Fishing Rüstung:','[Shark Scale Armor](https://hypixel-skyblock.fandom.com/wiki/Shark_Scale_Armor)')
+          .addField('Alternativ auch gut:','[Divers Armor](https://hypixel-skyblock.fandom.com/wiki/Diver%27s_Armor)')
           .setTimestamp()
           .setFooter(config.footer)
         message.channel.send(embed)
@@ -29,10 +30,11 @@ module.exports = async function (message) {
 
     if ((message.content.match(/(was ist)|welche/i))
     && (message.content.match(/fishing|angel|rod/i))
-    && (message.content.match(/beste|(winter insel)/i))) {
+    && (message.content.match(/beste|(winter insel)/i))
+    && (!message.content.match(/rüstung|armor|armour/i))) {
         var embed = new Discord.MessageEmbed()
           .setColor(config.color)
-          .setTitle(config.version)
+          .setTitle(config.version + 'Fishing')
           .addField('Die beste Angel generell:','[Rod of the Sea](https://hypixel-skyblock.fandom.com/wiki/Rod_of_the_Sea)')
           .addField('Die beste Angel auf der Winter Insel (für Winter Sea Creatures):','[Auger Rod](https://hypixel-skyblock.fandom.com/wiki/Auger_Rod)')
           .setTimestamp()
@@ -44,7 +46,7 @@ module.exports = async function (message) {
     && (message.content.match(/bait/i))) {
         var embed = new Discord.MessageEmbed()
           .setColor(config.color)
-          .setTitle(config.version)
+          .setTitle(config.version + 'Fishing')
           .setDescription('Es gibt nicht **DEN** besten Bait. Jeder ist für etwas gut. [Übersicht aller Baits](https://hypixel-skyblock.fandom.com/wiki/Fishing_Bait)')
           .addField('Für schnelles Angeln:','**Minnow Bait** und **Spooky Bait** (je +15%) oder **Fishing Bait** (+30%)')
           .addField('Für schnelles Angeln zu bestimmten Zeiten:','**Light Bait** (bei Tag) oder **Dark Bait** (bei Nacht)')

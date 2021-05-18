@@ -7,7 +7,7 @@ module.exports = async function (message) {
     && (message.content.match(/reforge/i))) {
         var embed = new Discord.MessageEmbed()
           .setColor(config.color)
-          .setTitle(config.version)
+          .setTitle(config.version + 'Foraging')
           .addField('Bestes Reforge für Foraging:','[Toil](https://hypixel-skyblock.fandom.com/wiki/Toil_Log)')
           .setTimestamp()
           .setFooter(config.footer)

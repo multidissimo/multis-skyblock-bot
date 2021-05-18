@@ -23,6 +23,9 @@ client.on('message', mining);
 const pets = require('./autoTrigger/pets');
 client.on('message', pets);
 
+const damage = require('./autoTrigger/damage');
+client.on('message', damage);
+
 const todo = require('./morefunctions/todo');
 client.on('message', todo);
 

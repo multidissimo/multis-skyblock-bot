@@ -3,8 +3,7 @@ module.exports = async function (message) {
     const config = require('../config.json');
 
     const todolist = ["-Andere Reforges","-Ultimate Enchants","-Dungeons Requirements","-Archer Antwort","-Mage Antwort","-Berserk Antwort","-Healer Antwort",
-    "-Tank Antwort","-Mehr Damage/Talismane","-Campfire Badge","-Fishing Rüstung","-Mining Rüstung","-Spooky Event","-Farming Speed","-","-Verbotene Wörter Liste","-Verbotene Wörter Zähler",
-    "-Coin System","-Coinspiele"];
+    "-Tank Antwort","-Campfire Badge","-Spooky Event"];
 
     if (message.content === "!todolist") {
         message.channel.send(todolist)
