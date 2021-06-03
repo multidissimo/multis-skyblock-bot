@@ -92,4 +92,17 @@ module.exports = async function (message) {
           .setFooter(config.footer)
         message.channel.send(embed)
     }
+
+    if ((message.content.match(/(was ist)|welches|beste/i))
+    && (message.content.match(/petitem|item|(pet item)/i))
+    && (message.content.match(/(baby yeti)|yeti/i))) {
+        var embed = new Discord.MessageEmbed()
+          .setColor(config.color)
+          .setTitle(config.version + 'Pets')
+          .addField('Zum Leveln','Fishing Exp Boost')
+          .addField('Für Dungeons','Spooky Cupcake / Antique Remedies')
+          .setTimestamp()
+          .setFooter(config.footer)
+        message.channel.send(embed)
+    }
 }

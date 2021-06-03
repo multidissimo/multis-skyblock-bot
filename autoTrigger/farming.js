@@ -3,7 +3,8 @@ module.exports = async function (message) {
     const config = require('../config.json');
 
     if (message.content.match(/farm|farmen|(schnell farmen)|(gute farm)/i)
-    && (message.content.match(/bau|contest/i))) {
+    && (message.content.match(/bau|contest/i))
+    && (message.content.match(/wie/i))) {
         var embed = new Discord.MessageEmbed()
           .setColor(config.color)
           .setTitle(config.version + 'Farming')

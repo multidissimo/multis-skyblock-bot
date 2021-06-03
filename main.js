@@ -26,6 +26,12 @@ client.on('message', pets);
 const damage = require('./autoTrigger/damage');
 client.on('message', damage);
 
+const talismane = require('./autoTrigger/talismane');
+client.on('message', talismane);
+
+const waffen = require('./autoTrigger/waffen');
+client.on('message', waffen);
+
 const todo = require('./morefunctions/todo');
 client.on('message', todo);
 
